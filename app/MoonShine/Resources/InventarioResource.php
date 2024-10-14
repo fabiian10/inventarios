@@ -85,6 +85,7 @@ class InventarioResource extends ModelResource
             Text::make('Serie'),
             File::make('Archivo')
                 ->disk('documentos')
+                ->dir('pdfs')
                 ->keepOriginalFileName(), 
         ];
     } 

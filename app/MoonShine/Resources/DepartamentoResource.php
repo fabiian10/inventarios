@@ -33,6 +33,10 @@ class DepartamentoResource extends ModelResource
  
     protected bool $detailInModal = false;
 
+    public function redirectAfterSave(): string{
+        return '/inventarios/resource/departamento-resource/departamento-index-page';
+    }
+
     /**
      * @return list<MoonShineComponent|Field>
      */
@@ -43,11 +47,11 @@ class DepartamentoResource extends ModelResource
                 ID::make()->sortable(),
                 Text::make('Nombre Departamento'),
                 Text::make('Nombre Titular'),
-                Text::make('Tratamiento'),
-                Text::make('Cargo'),
+                Text::make('Tratamiento Titular'),
+                Text::make('Cargo Titular'),
                 Text::make('Prefijo'),
-                Text::make('Carpeta Documentos'),
-                Text::make('Ur')
+                Text::make('Carpeta'),
+                Text::make('Ur Perteneciente')
             ]),
         ];
     }

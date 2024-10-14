@@ -10,7 +10,7 @@
         </div>
         <div class="border-t border-gray-200 dark:border-dark-600">
             <iframe 
-                src="{{ Storage::disk('public')->url($pdf->file_path) }}" 
+                src="{{ Storage::disk('documentos')->url($pdf->file_path) }}" 
                 class="w-full" 
                 style="height: 600px;"
                 frameborder="0"
