@@ -1,2 +1,2 @@
 # inventarios
-proyectos-inventarios
+proyecto-inventarios
