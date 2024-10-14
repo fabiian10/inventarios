@@ -15,6 +15,7 @@ use MoonShine\Components\MoonShineComponent;
 use MoonShine\Fields\Text;
 use MoonShine\Fields\File;
 use Illuminate\Support\Facades\Storage; 
+use Sweet1s\MoonshineRBAC\Traits\WithRolePermissions;
 
 /**
  * @extends ModelResource<Inventario>
@@ -25,6 +26,8 @@ class InventarioResource extends ModelResource
     protected string $model = Inventario::class;
 
     protected string $title = 'Tabla de Inventarios';
+
+    use WithRolePermissions;
 
     protected bool $createInModal = true; 
  

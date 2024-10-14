@@ -11,7 +11,8 @@
         "laravel/ui": "^4.5",
         "livewire/livewire": "^3.5",
         "moonshine/moonshine": "^2.22",
-        "spatie/laravel-permission": "^6.9"
+        "spatie/laravel-permission": "^6.9",
+        "sweet1s/moonshine-roles-permissions": "^2.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

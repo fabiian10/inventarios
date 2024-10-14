@@ -85,7 +85,8 @@ return [
         'providers' => [
             'moonshine' => [
                 'driver' => 'eloquent',
-                'model' => MoonshineUser::class,
+                //'model' => MoonshineUser::class,
+                'model' => \App\Models\User::class,
             ],
         ],
         'pipelines' => [],
