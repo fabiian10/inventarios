@@ -43,22 +43,23 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
     protected function menu(): array
     {
         return [
-            MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
-                MenuItem::make(
-                    static fn() => __('moonshine::ui.resource.admins_title'),
-                    new MoonShineUserResource()
-                ),
-                MenuItem::make(
-                    static fn() => __('moonshine::ui.resource.role_title'),
-                    new MoonShineUserRoleResource()
-                ),
-            ]),
+            // MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
+            //     MenuItem::make(
+            //         static fn() => __('moonshine::ui.resource.admins_title'),
+            //         new MoonShineUserResource()
+            //     ),
+            //     MenuItem::make(
+            //         static fn() => __('moonshine::ui.resource.role_title'),
+            //         new MoonShineUserRoleResource()
+            //     ),
+            // ]),
 
             MenuGroup::make('System', [
                 MenuItem::make('Admins', new \Sweet1s\MoonshineRBAC\Resource\UserResource(), 'heroicons.outline.users'),
                 MenuItem::make('Roles', new \Sweet1s\MoonshineRBAC\Resource\RoleResource(), 'heroicons.outline.shield-exclamation'),
                 MenuItem::make('Permissions', new \Sweet1s\MoonshineRBAC\Resource\PermissionResource(), 'heroicons.outline.shield-exclamation'),
             ], 'heroicons.outline.user-group'),
+            
             MenuItem::make('Inventarios', new InventarioResource),
             MenuItem::make('Catalogos', new CatalogoResource),
             MenuItem::make('Departamentos', new DepartamentoResource),

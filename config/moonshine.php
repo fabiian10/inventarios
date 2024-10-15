@@ -93,6 +93,7 @@ return [
     ],
     'locales' => [
         'en',
+        'es',
         'ru',
     ],
 

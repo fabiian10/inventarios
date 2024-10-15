@@ -24,6 +24,30 @@ class Dashboard extends Page
         return $this->title ?: 'Bienvenido';
     }
 
+    protected function topLayer(): array 
+    {
+        return [
+            Heading::make('Custom top'),
+            ...parent::topLayer()
+        ];
+    } 
+ 
+    protected function mainLayer(): array 
+    {
+        return [
+            Heading::make('Custom main'),
+            ...parent::mainLayer()
+        ];
+    } 
+ 
+    protected function bottomLayer(): array 
+    {
+        return [
+            Heading::make('Custom bottom'),
+            ...parent::bottomLayer()
+        ];
+    } 
+
     /**
      * @return list<MoonShineComponent>
      */
